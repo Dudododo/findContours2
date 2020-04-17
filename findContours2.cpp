@@ -25,8 +25,9 @@ int main()
 			drawContours(srcMat, contours, i, Scalar(0, 255, 255), 1, 8);
 			Point2f vtx[4];
 			rbox.points(vtx);
-			for (int j = 0; j < 4; ++j) {
-				cv::line(srcMat, vtx[j], vtx[j < 3 ? j + 1 : 0], Scalar(0, 0, 255), 2, LINE_AA);
+			for (int i = 0; i < 4; ++i) 
+			{
+				cv::line(srcMat, vtx[i], vtx[i < 3 ? i + 1 : 0], Scalar(0, 0, 255), 2, LINE_AA);
 			}
 		}
 	}
